@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/user_avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/theme_orange"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/add_time"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:textSize="18sp"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="18dp"
+        android:layout_height="31dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/timeline_start" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true" />
+
+    <TextView
+        android:layout_width="18dp"
+        android:layout_height="31dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/timeline_end" />
+
+</LinearLayout>

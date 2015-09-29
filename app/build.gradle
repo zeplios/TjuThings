@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "20.0.0"
+
+    defaultConfig {
+        applicationId "edu.tju.ina.things"
+        minSdkVersion 15
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    //AppCompat与SherlockActionBar冲突，因为AppCompat文档很少而且不能完全替代Sherlock，所以不使用AppCompat
+    //compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
+
+    //compile files('libs/gson-2.3.jar')
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.edmodo:cropper:1.0.1'//图片剪裁
+    compile 'com.github.sd6352051.niftydialogeffects:niftydialogeffects:1.0.0@aar'//对话框
+    compile 'com.github.chrisbanes.photoview:library:1.2.3@aar'//可缩放的图
+    compile 'com.github.siyamed:android-shape-imageview:0.9.2@aar'
+
+    compile "org.parceler:parceler-api:0.2.15"
+    provided "org.parceler:parceler:0.2.15"
+
+    compile project(':slidingmenu')
+    compile project(':pulltorefresh')
+    compile project(':ProgressWheel')
+}

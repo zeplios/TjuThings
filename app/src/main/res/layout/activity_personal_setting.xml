@@ -1,0 +1,115 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ScrollView
+        android:id="@+id/add_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/user_avatar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/menu_login" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_in_personal_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/user_nickname"
+                android:text="呢称" />
+
+            <EditText
+                android:id="@+id/user_nickname"
+                style="@style/upload_input_in_personal_setting"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="输入你的昵称" />
+
+            <TextView
+                style="@style/text_in_personal_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/user_gender"
+                android:text="性别" />
+
+            <RadioGroup
+                android:id="@+id/user_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:textSize="18sp">
+
+                <RadioButton
+                    android:id="@+id/gender_0"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="男" />
+
+                <RadioButton
+                    android:id="@+id/gender_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="女" />
+
+                <RadioButton
+                    android:id="@+id/gender_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="保密" />
+            </RadioGroup>
+
+            <TextView
+                style="@style/text_in_personal_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/user_email"
+                android:text="E-mail" />
+
+            <EditText
+                android:id="@+id/user_email"
+                style="@style/upload_input_in_personal_setting"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="邮箱****@tju.edu.cn或者其它的" />
+
+            <TextView
+                style="@style/text_in_personal_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/user_phone"
+                android:text="手机号" />
+
+            <EditText
+                android:id="@+id/user_phone"
+                style="@style/upload_input_in_personal_setting"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="你的手机号码" />
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

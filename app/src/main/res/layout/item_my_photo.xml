@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/info_add" />
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="100dp"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"/>
+    <Button
+        android:id="@+id/update"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:text="@string/update"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/set_poster"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:text="@string/photo_set_poster"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.edmodo.cropper.CropImageView
+            android:id="@+id/crop_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            custom:guidelines="onTouch"/>
+        <Button
+            android:id="@+id/select_image"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/select_image"/>
+    </LinearLayout>
+
+</FrameLayout>

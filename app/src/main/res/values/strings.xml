@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">天大的事儿</string>
+    <string name="hdlist_title">社团活动</string>
+    <string name="collect_title">我的收藏</string>
+    <string name="my_album_title">我的相册</string>
+    <string name="add_title">添加新项</string>
+    <string name="update_title">修改添加项</string>
+
+    <!-- 通用的 Start -->
+    <string name="go_back">返回</string>
+    <string name="send">发送</string>
+    <string name="ok">完成</string>
+    <string name="update">更新</string>
+
+    <!-- 通用的 End -->
+
+    <string name="network_connect_error_hint">网络出了点问题，请检查网络设置，稍后重试~</string>
+    <string name="left_menu_login_hint">请登录哟</string>
+    <string name="left_menu_goto">去看看</string>
+
+    <!-- 可能通用的 Body -->
+    <!-- whether a info is completed -->
+    <string name="info_completed">是否已完成</string>
+    <string name="info_completed_y">是</string>
+    <string name="info_completed_n">否</string>
+    <string name="photoDetail">没有想好这个详情页要写什么</string>
+
+    <string-array name="left_menu">
+        <item>首页</item>
+        <item>收藏</item>
+        <item>我的相册</item>
+        <item>我的发布</item>
+        <item>登出</item>
+    </string-array>
+
+    <integer-array name="left_menu_img">
+        <item>@drawable/menu_home</item>
+        <item>@drawable/menu_collect</item>
+        <item>@drawable/menu_setting</item>
+        <item>@drawable/menu_setting</item>
+        <item>@drawable/menu_signout</item>
+    </integer-array>
+
+    <string name="detail_detail_title">活动详情</string>
+    <string name="detail_org_title">社团信息</string>
+    <string name="detail_com_title">公司信息</string>
+    <string name="detail_comwebsite_title">公司官网</string>
+    <string name="detail_description_title">物品描述</string>
+    <string name="search_hint">写点什么搜搜看</string>
+    <string name="login_username">Your ID：</string>
+    <string name="login_password">Password：</string>
+    <string name="login_tips1">温馨提示：</string>
+    <string name="login_tips2">账号密码与天大办公网相同哦~</string>
+    <string name="login_register_btn">注册</string>
+    <string name="login_login_btn">登录</string>
+    <string name="register_password_digits">_0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="register_email">邮箱</string>
+    <string name="add_market_title">点击输入物品名称</string>
+    <string name="add_market_price">您觉得它值多少钱呢</string>
+    <string name="add_market_contact">您的联系方式（手机号）</string>
+    <string name="add_market_description">这里是详细描述~(不超过150字)</string>
+    <string name="lost_found_title">点击输入物品名称</string>
+    <string name="lost_found_where">点击输入捡到/丢失物品的地点</string>
+    <string name="lost_found_role">请选择您的身份</string>
+    <string name="lost_found_owner">我是失主</string>
+    <string name="lost_found_notowner">我是拾主</string>
+    <string name="lost_found_contact">请输入您的联系方式（可不填）</string>
+    <string name="lost_found_ownerid">请输入失主的学号或姓名（学号优先哦~）</string>
+    <string name="lost_found_description">这里是详细描述~(不超过150字)</string>
+    <string name="loaded_fail">加载失败</string>
+    <string name="album_title">相册-画板报</string>
+    <string name="add_album_title">给相册起个名字吧~</string>
+    <string name="album_raw_photos">下面是相册的照片列表</string>
+    <string name="album_new_photos">下面是新添加的照片列表</string>
+    <string name="album_upload_photos">一键添加</string>
+    <string name="photo_set_poster">设为封面</string>
+    <string name="title_activity_modify_avatar">修改头像</string>
+    <string name="select_image">选择图片</string>
+
+    <!-- ==============编程过程中请遵循某些规范来简化开发============== -->
+    <!-- ===============下面的几个数组，请保证每一项对应============== -->
+    <integer-array name="info_ids">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </integer-array>
+
+    <string-array name="info_vo_names">
+        <item>Activity</item>
+        <item>Recruit</item>
+        <item>Lost</item>
+        <item>Market</item>
+        <item>Album</item>
+        <item>Photo</item>
+    </string-array>
+    <string-array name="info_ch_names">
+        <item>校内活动</item>
+        <item>招聘信息</item>
+        <item>失物招领</item>
+        <item>二手市场</item>
+        <item>照片墙</item>
+        <item>照片</item>
+    </string-array>
+    <!-- =======vo_class_package是各个信息vo类的类名，%s被上面的info_vo_names替换，主要用于根据json串生成对应实体======= -->
+    <string name="vo_class_package">edu.tju.ina.things.vo.info.%s</string>
+    <!-- =======add_class_package是添加新信息的Activity的类名，%s被上面的info_vo_names替换======= -->
+    <string name="add_class_package">edu.tju.ina.things.ui.adds.Add%sActivity</string>
+    <!-- =======detail_class_package是详情页的Fragment，除评论、赞、收藏之外的信息都在Fragment里，%s被上面的info_vo_names替换======= -->
+    <string name="detail_class_package">edu.tju.ina.things.fragments.details.Detail%sFragment</string>
+
+    <!-- ========================InfoListFragment中包含哪些类型的信息列表========================== -->
+    <integer-array name="infoids_in_infolist">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </integer-array>
+    <!-- ========================InfoListFragment中包含哪些类型的信息列表========================== -->
+    <integer-array name="infoids_in_myinfo">
+        <item>3</item>
+        <item>4</item>
+    </integer-array>
+
+</resources>

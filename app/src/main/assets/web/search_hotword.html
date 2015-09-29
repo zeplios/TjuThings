@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html style="height:100%">
+  <head>
+    <title>jQCloud Example</title>
+    <link rel="stylesheet" type="text/css" href="jqcloud/jqcloud.css" />
+    <script type="text/javascript" src="jqcloud/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="jqcloud/jqcloud-1.0.4.js"></script>
+    <script type="text/javascript">
+      var word_list = new Array();
+      $(function() {
+      	//$.get("http://info.app.tju.edu.cn:8080/estuary/rest/hotword", function(result){
+		//	alert(result);
+		//});
+		$.ajax({
+			url: "http://info.app.tju.edu.cn:8080/estuary/rest/hotword",
+			dataType: "jsonp",
+			type: 'GET',
+		  	jsonpCallback: "callback",
+		    success: function(result) {
+		  		for (var i = 0 ; i < result.length ; i++) {
+		  			var hotword = result[i];
+		  			word_list.push({ text: hotword.word, weight: Math.sqrt(hotword.count), link : "javascript:pass_to_app('" + hotword.word + "')"});
+		  		}
+        		$("#my_favorite_latin_words").jQCloud(word_list);
+		    }
+		});
+      });
+      function pass_to_app(name) {
+		window.android.clickOnAndroid(name);
+      }
+    </script>
+  </head>
+  <body style="height:100%">
+    <div id="my_favorite_latin_words" style="width: 100%; height: 100%"></div>
+  </body>
+</html>

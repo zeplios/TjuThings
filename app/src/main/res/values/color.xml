@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <!-- <color name="background">#dcdcdc</color> -->
+    <color name="background">#fbf7f4</color>
+    <color name="theme_orange">#ff8c31</color>
+    <color name="input_orange">#faccaa</color>
+    <color name="text_grey">#838282</color>
+</resources>
